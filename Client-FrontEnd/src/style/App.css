@@ -1,0 +1,109 @@
+/* Carousel container to ensure it's above other elements */
+
+
+/* .carousel {
+  position: relative; 
+  z-index: 10; 
+} */
+
+
+/* Remove extra space around the carousel */
+
+
+/* Ensuring cards stay below the carousel */
+.card {
+  position: relative; /* Creates a new stacking context */
+  z-index: 1; /* Keeps the card below the carousel */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly increases the size */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
+  border: 2px solid #007bff; /* Highlights the card with a blue border */
+}
+
+/* Optional: To prevent cards from overlapping each other */
+.image-container {
+  position: relative; /* Ensures proper stacking */
+  width: 300px; /* Fixed width for all images */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doctor-image {
+  width: 100%; /* Ensures the image fits the container width */
+  height: auto; /* Keeps the aspect ratio intact */
+  object-fit: contain; /* Ensures the entire image is visible */
+}
+
+
+/* In your global CSS or App.css */
+/* Ensure the body and HTML take the full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area should take up remaining space */
+.container.mt-4 {
+  flex: 1;
+}
+
+
+
+.appointment-landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page is at least the full height of the viewport */
+}
+
+.appointment-landing-page .container {
+  flex: 1; /* Take up the available space */
+  padding-bottom: 100px; /* Optional: add space for the footer */
+}
+
+.heading {
+  text-decoration: underline;
+  color: rgb(20, 83, 167);
+  font-weight: bold;
+}
+
+
+/* Ensure the page takes up the full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flexbox container to ensure footer stays at the bottom */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content takes up available space above footer */
+.main-content {
+  flex: 1;
+}
+
+/* Footer styles */
+.footer-container footer {
+  background-color: #f8f9fa; /* Light background */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-container footer a {
+  color: #000; /* Dark text */
+  text-decoration: none;
+}
+
+.footer-container footer a:hover {
+  text-decoration: underline;
+}
