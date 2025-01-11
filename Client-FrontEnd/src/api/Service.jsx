@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 
-const BASE_URL = 'http://localhost:8080';
+
+const BASE_URL = `${process.env.REACT_APP_API_URL}`;
+
 
 const USER_API_URL = `${BASE_URL}/users`;
 const ADMIN_API_URL = `${BASE_URL}/admin`;
@@ -76,10 +78,18 @@ export const loginUser = (email, password) => {
   return axios.post(`${USER_API_URL}/login`, { email, password });
 };
 
-export const registerUser = (user) => {
-  return axios.post(`${USER_API_URL}/register`, { user });
+export const registerUser = async (user) => {
+  try {
+      const response = await axios.post(`${USER_API_URL}/register`, {
+          email: user.email,
+          fullName: user.name,
+          password: user.password,
+      });
+      return response;
+  } catch (error) {
+      throw error;
+  }
 };
-
 export const changePassword = (email, oldPassword, newPassword) => {
   return axios.post(`${USER_API_URL}/change-password`, { email, oldPassword, newPassword });
 };

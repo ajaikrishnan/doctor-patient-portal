@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hms</groupId>
-	<artifactId>HospitalMAnagement</artifactId>
+	<artifactId>HospitalManagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>HospitalMAnagement</name>
+	<name>HospitalManagement</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
