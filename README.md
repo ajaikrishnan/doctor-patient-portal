@@ -13,6 +13,11 @@ Welcome to the **Doctor-Patient Portal** application! This system allows doctors
 - **Patient Appointment Booking**  
   Patients can view available doctors and book appointments with them.
 
+## Demo
+
+You can try the live demo of the Doctor-Patient Portal here:  
+[Hospital Management Demo](https://hospitalmanagementkich.netlify.app/)
+
 ## Tech Stack
 
 ### Backend
